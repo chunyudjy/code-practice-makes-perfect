@@ -1,0 +1,12 @@
+> import glob
+> import pandas as pd
+> files = sorted(glob.glob('datapath/*.csv'))
+> print(files)
+
+> sheet_name = "Fee-Earnings"import pandas as pd
+
+> files = sorted(glob.glob('datapath/*.csv'))
+
+> print(files)
+
+> sheet_name = "Fee-Earnings"
