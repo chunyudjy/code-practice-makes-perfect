@@ -1,37 +1,48 @@
-## Welcome to GitHub Pages
+> import glob
 
-You can use the [editor on GitHub](https://github.com/chunyudjy/kojimatoys/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+紹介：[https://www.tech-teacher.jp/blog/python-glob/]
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+globは、pythonのモジュールの1つです。pythonでは、glob関数を使うことで特定のパターンにマッチするファイルを取得することができます。
+- file = glob.glob(‘test/*.txt’)
 
-### Markdown
+test/ディレクトリの中にある「*.txt」というパターンに一致するファイルを取得する.はワイルドカード文字と呼ばれるもので「任意の文字列」を表します
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
-```markdown
-Syntax highlighted code block
+> import pandas as pd
 
-# Header 1
-## Header 2
-### Header 3
+> files = sorted(glob.glob('datapath/*.csv'))
 
-- Bulleted
-- List
+紹介：[https://note.nkmk.me/python-list-sort-sorted/]
 
-1. Numbered
-2. List
+1. リスト型のメソッド sort(): 元のリストをソート(自体が書き換えられる破壊的処理)
 
-**Bold** and _Italic_ and `Code` text
+|例1|
+|:---:|
+|org_list = [3, 1, 4, 5, 2]|
+|org_list.sort()|
+|print(org_list)|
+|[1, 2, 3, 4, 5]|
 
-[Link](url) and ![Image](src)
-```
+sort()が返すのはNoneなので注意。
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+|例2|
+|:---:|
+|print(org_list.sort())|
+|'No return'|
 
-### Jekyll Themes
+2. 組み込み関数 sorted(): ソートした新たなリストを生成
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/chunyudjy/kojimatoys/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+引数にソートしたいリストを指定するとソートされたリストを返す。元のリストは変更されない非破壊的処理。
 
-### Support or Contact
+|例3|
+|:---:|
+|org_list = [3, 1, 4, 5, 2]|
+|new_list = sorted(org_list)|
+|print(org_list)|
+|print(new_list)|
+|[3, 1, 4, 5, 2]|
+|[1, 2, 3, 4, 5]|
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+> print(files)
+
+> sheet_name = "Fee-Earnings"
